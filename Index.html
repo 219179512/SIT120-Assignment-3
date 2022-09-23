@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- External CSS and other programming pages here -->
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <head>
+        <!-- Title for website name and specific page -->
+        <title>Key Companion - Home</title>
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar at top of page, including relevant page links and user unique identifiers -->
+        <div class="navbar">
+            <a href="Index.html">Home</a>
+            <a href="Chat.html">Chat</a>
+            <a href="Index.html" class="split"> Michael_1998</a>
+        </div>
+        
+        <!-- Date Component -->
+        <p><b>The current date is: </b></p>
+            <div id="current_date"></p>
+                <script>
+                    date = new Date();
+                    year = date.getFullYear();
+                    month = date.getMonth() + 1;
+                    day = date.getDate();
+                    document.getElementById("current_date").innerHTML = month + "/" + day + "/" + year;
+                </script>
+
+        <h2>
+        <!-- Vue: Props and Components -->
+        <div id="app">
+            <component1 :person="person"></component1>
+        </div> 
+        </h2>
+
+        <!-- Example of personalised content for home page -->
+        <div class="column">
+        <h3>What others see about you!</h3>
+        <p1>What you do:</p1>
+        <ul>
+            <li>University Student </li></ul>
+        <p1>Where you're from:</p1>
+        <ul>
+            <li>Victoria, Australia </li></ul>
+        <p1>What languages you speak:</p1>
+        <ul>
+            <li>English (fluent), German(learning), Dutch(learning) </li></ul>
+        <p1>What you like:</p1>   
+        <ul>
+            <li>Video games: </li>
+                <ul>
+                    <li>Rogue likes, Puzzle games, Simulation and Survival games</li></ul>
+            <li>Movies: </li>
+                <ul>
+                    <li>Horror, Thriller, Action and Mystery</li></ul>
+            <li>Hobbies:  </li>
+                <ul>
+                    <li>Puzzle Building, Stamp Collecting, Recreational Coding and Learning Languages</li></ul>
+          </ul>         
+        </div>
+            
+        <div class="column">
+            <h3>What you look like!</h3>
+            <img src="UserPFPSample.jpg" alt="UserPFPSample" class="responsivecenter" height="600px" width="600px"></img>
+        </div>
+            
+        <div class="column">
+            <h3>Information that might interest you!</h3>
+            <p1>Did you know?</p1>
+            <ul>
+                <li>Key Companion has 30,000 current users today! </li></ul>
+            <p1>What about?</p1>
+            <ul>
+                <li>Currently, there are 4,089 users currently online! Say hello to one of them! </li></ul>
+            <p1>And also?</p1>
+            <ul>
+                <li>Key companion is always working on implementing new features! As per popular demand, voice and video chat to be added soon! </li></ul>        
+        </div>
+    </body>    
+</html>
+
+<!-- Vue: Props and Components -->
+<script>
+    var component1 = {
+        template: '<div>Welcome {{ person.firstname }} {{ person.lastname }}!</div>',
+    props: ["person"]
+    };
+    var app = new Vue({
+        el: '#app',
+        
+        data: {
+            person: {
+                firstname: 'Michael_',
+                lastname: '1998',
+            },
+        },
+        components: {
+            component1,
+        },
+    });
+</script>
+
+
+

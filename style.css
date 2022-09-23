@@ -1,5 +1,8 @@
 body {
-    background-color: rgb(172, 172, 172);
+    font-family: sans-serif;
+    font-weight: 100;
+    background: -webkit-linear-gradient(to right, #dad0d0, #454446); 
+    background: linear-gradient(to right, #dad0d0, #454446);
 }
 
 p {
@@ -7,13 +10,12 @@ p {
 }
 
 h3 {
-    color: #ffffff; background-color:rgb(78, 78, 78);
+    color: #ffffff; background-color:#454446;
 }
-
 
 .navbar {
     overflow: hidden;
-    background-color: rgb(78, 78, 78);
+    background-color: #454446;
   } 
 
 .navbar a {
@@ -32,7 +34,7 @@ h3 {
 
 .navbar a.split {
     float: right;
-    background-color: rgb(78, 78, 78);
+    background-color: #454446;
     color: white;
   }
 
@@ -51,5 +53,14 @@ h3 {
 @media screen and (max-width:500px) {
     .column {
     width: 100%;
-    }
+}
+}
+
+.responsivecenter {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
